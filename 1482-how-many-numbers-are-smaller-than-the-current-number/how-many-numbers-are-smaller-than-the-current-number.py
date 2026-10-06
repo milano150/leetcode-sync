@@ -1,13 +1,18 @@
 class Solution(object):
     def smallerNumbersThanCurrent(self, nums):
+        hashmap = {}
         out = []
-        for i in nums:
-            count = 0
-            for j in nums:
-                if j < i:
-                    count += 1
-            out.append(count)
+        temp = sorted(nums)
+        for i,v in enumerate(temp):
+            if v not in hashmap:
+                hashmap[v] = i
+        for v in nums:
+            out.append(hashmap[v])
         return out
+        
+            
+
+
 
 
         
