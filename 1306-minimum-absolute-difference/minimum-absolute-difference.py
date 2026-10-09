@@ -1,6 +1,6 @@
 class Solution(object):
     def minimumAbsDifference(self, arr):
-        smallest = max(arr) - min(arr)
+        smallest = float('inf')
         arr.sort()
         out = []
         for i in range(len(arr)-1):
